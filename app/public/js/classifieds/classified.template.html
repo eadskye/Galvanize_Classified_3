@@ -1,0 +1,48 @@
+<!--post ad---------------------------------->
+
+   <link rel="stylesheet" href="styles.css">
+ <ul class="nav nav-pills">
+   <li class="active">
+     <input type="search" placeholder="Search ads" name="search" class="form-control input-sm search-form" ng-model="search"/>
+   </li>
+     <li class="dropdown" ng-init="sortType='date'; sortName='Date'">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Sort By {{sortName}}<span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" >
+          <li>
+            <a class="btn btn-sort" ng-click="sortType='date'; sortName='Date'">Date</a>
+          </li>
+            <li>
+                <a class="btn btn-sort" ng-click="sortType='price'; sortName='Price'">Price</a>
+            </li>
+        </ul>
+    </li>
+ </ul>
+    <h1>Advertisements</h1><br />
+
+    <div ng-repeat="classified in $ctrl.ads | orderBy: $ctrl.sort | filter: $ctrl.search">
+    <div>
+        {{classified.title}}
+        {{classified.description}}
+        {{classified.price}}
+        <div>
+            <img ng-src="{{classified.item_image}}"/>
+        </div>
+        <button ui-sref="edit({id: classified.id })" id= "edit-delete">Edit or Delete</button><br />
+    </div>
+</div><br />
+
+
+<h3>Add New Classified</h3>
+<form novalidate name="form" ng-submit="$ctrl.createAd($ctrl.ad)">
+    <label for="title">Title</label><br />
+    <input type="text" name="title" ng-model="$ctrl.ad.title"/><br />
+    <label for="description">Description</label><br />
+    <input type="text" name="description" ng-model="$ctrl.ad.description"/><br />
+    <label for="price">Price</label><br />
+    <input type="text" name="price" ng-model="$ctrl.ad.price"/><br />
+    <label for="item_image">Image URL</label><br />
+    <input type="text" name="item_image" ng-model="$ctrl.ad.item_image"/><br />
+  <br />
+    <button type="submit" class="btn btn-primary" id="create">Create Classified</button>
+</form>

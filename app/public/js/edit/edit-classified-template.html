@@ -1,0 +1,51 @@
+
+<!-- <div class="page-header">
+
+</div> -->
+<!-- <div class= "container-fluid">
+
+
+<div class="row"> -->
+  <h1>Edit/Delete</h1><br /><br />
+    {{$ctrl.ad.title}}
+    <!-- {{$ctrl.ad.id}} -->
+
+<!-- </div>
+</div> -->
+
+  <div class="col-md-8">
+
+    <form name="form" novalidate ng-submit="$ctrl.editAd()">
+    <div>
+    <div ng-class='form-group'>
+        <label for="title">Title</label>
+      <input class="form-control" ng-model="$ctrl.ad.title" type="text" name="title" id="title" placeholder="title"/>
+
+    </div><br />
+    <div ng-class='form-group'>
+          <label for="description">Description</label>
+      <textarea class="form-control" ng-model="$ctrl.ad.description" type="text" name="description" id="description" placeholder="description"/></textarea>
+
+    </div><br />
+    <div ng-class='form-group'>
+      <label for="price">Price</label>
+      <input class="form-control" ng-model="$ctrl.ad.price" type="text" name="price" id="price" placeholder="price"/>
+
+    </div><br />
+    <div ng-class='form-group'>
+        <label for="image">Item Image</label><br />
+      <input ng-class="form-control" ng-model="$ctrl.ad.item_image" type="url" name="image" id="image" placeholder="image url"/>
+
+    </div><br />
+    <div class="form-group">
+      <button type="submit" id="edit-delete" class="btn btn-primary">Edit</button>
+
+
+      <button type="button" id="edit-delete" class="btn btn-primary" ng-click="$ctrl.deleteAd()">
+      Delete
+    </button>
+    </div>
+    </div>
+</form>
+  </div>
+</div>

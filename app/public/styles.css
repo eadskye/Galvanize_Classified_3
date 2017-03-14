@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+
+    background-image: url("cat.jpg");
+    font-family: "Abril Fatface";
+    color: #FA37C9;
+    font-size: 24px;
+	  font-style: normal;
+	  font-variant: normal;
+	  font-weight: 500;
+	  line-height: 26.4px;
+}
+
+#navbar {
+  font-family: "Abril Fatface";
+  color: #FA37C9;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 26.4px;
+}
+
+#nav {
+  background-color: black;
+
+}
+#edit-delete {
+  background-color: black;
+  font-family: "Abril Fatface";
+  color: #FA37C9;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 26.4px;
+}
+#create {
+  background-color: black;
+  font-family: "Abril Fatface";
+  color: #FA37C9;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 26.4px;
+}
