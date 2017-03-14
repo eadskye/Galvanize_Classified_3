@@ -14,11 +14,7 @@ const path= require('path');
 
 // app.use('/classifieds', messages);
 
-// const port = process.env.PORT || 3000;
-//
-// app.listen(port, () => {
-//   console.log('Listening on port', port);
-// });
+
 
 app.use('/api/classifieds', require('./routes/classifieds'));
 
@@ -49,4 +45,9 @@ app.use('*', function(req, res) {
 
 });
 
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+  console.log('Listening on port', port);
+});
 module.exports = app;
